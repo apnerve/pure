@@ -1,0 +1,99 @@
+{
+  "name": "apnerve/pure",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "test",
+  "branch": "master",
+  "style": {
+    "name": "Brutalist",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BasicHeader",
+      "article": "article/MarkdownArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace",
+    "heading": {},
+    "typeScale": [
+      48,
+      32,
+      20,
+      18,
+      16,
+      14,
+      12
+    ],
+    "layout": {
+      "maxWidth": 1024,
+      "fluid": true
+    },
+    "colors": {
+      "text": "#333",
+      "background": "#fff",
+      "primary": "#666",
+      "secondary": "#888",
+      "highlight": "#1f80ff",
+      "muted": "#f6f6f6",
+      "border": "#eee"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "http://purecss.io/",
+          "text": "Home"
+        },
+        {
+          "href": "https://github.com/apnerve/pure",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/pure",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "pure",
+      "subhead": "A set of small, responsive CSS modules that you can use in every web project.",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "pure: A set of small, responsive CSS modules that you can use in every web project.",
+          "url": "http://purecss.io/"
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "apnerve",
+          "repo": "pure"
+        }
+      ],
+      "text": "v0.5.0"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "\n<p><a href=\"http://purecss.io/\"><img src=\"http://f.cl.ly/items/2y0M0E2Q3a2H0z1N1Y19/pure-banner.png\"></a></p>\n<p>A set of small, responsive CSS modules that you can use in every web project.\n<a href=\"http://purecss.io/\">http://purecss.io/</a></p>\n<p><a href=\"https://travis-ci.org/yui/pure\"><img src=\"https://travis-ci.org/yui/pure.png?branch=master\"></a></p>\n<p><strong>Use From the CDN:</strong></p>\n<pre><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">link</span> <span class=\"hljs-attr\">rel</span>=<span class=\"hljs-string\">&quot;stylesheet&quot;</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">&quot;http://yui.yahooapis.com/pure/0.5.0/pure-min.css&quot;</span>&gt;</span></pre><p>Note: You can <a href=\"http://purecss.io/customize/\">customize which Pure modules you need</a>.</p>\n<p><strong>Install with Bower:</strong></p>\n<pre>$ bower install --save pure</pre><h2>Features</h2>\n<p>Pure is meant to be a starting point for every website or web app. We take care\nof all the CSS work that every site needs, without making it look cookie-cutter:</p>\n<ul>\n<li><p>A responsive grid that can be customized to your needs.</p>\n</li>\n<li><p>A solid base built on <a href=\"http://necolas.github.io/normalize.css/\">Normalize.css</a> to fix cross-browser compatibility\nissues.</p>\n</li>\n<li><p>Consistently styled buttons that work with <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements.</p>\n</li>\n<li><p>Styles for vertical and horizontal menus, including support for dropdown\nmenus.</p>\n</li>\n<li><p>Useful form alignments that look great on all screen sizes.</p>\n</li>\n<li><p>Various common table styles.</p>\n</li>\n<li><p>An extremely minimalist look that is super-easy to customize.</p>\n</li>\n<li><p>Responsive by default, with a non-responsive option.</p>\n</li>\n<li><p>Easy one-click customization with the <a href=\"http://yui.github.io/skinbuilder/?mode=pure\">Skin Builder</a>.</p>\n</li>\n<li><p>Extremely small file size: <strong>4.5KB minified + gzip</strong>.</p>\n</li>\n</ul>\n<h2>Get Started</h2>\n<p>To get started using Pure, go to the <a href=\"http://purecss.io/\">Pure CSS website</a>. The website has\nextensive documentation and examples necessary to get you started using Pure.</p>\n<p>You can include the Pure CSS file in your project by fetching it from Yahoo&apos;s\nCDN:</p>\n<pre><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">link</span> <span class=\"hljs-attr\">rel</span>=<span class=\"hljs-string\">&quot;stylesheet&quot;</span> <span class=\"hljs-attr\">href</span>=<span class=\"hljs-string\">&quot;http://yui.yahooapis.com/pure/0.5.0/pure-min.css&quot;</span>&gt;</span></pre><p>You can also install Pure using <a href=\"http://bower.io/\">Bower</a>, using the following command:</p>\n<pre>$ bower install --save pure</pre><h2>Build From Source</h2>\n<p>Optionally, you can build Pure from its source on Github. To do this, you&apos;ll\nneed to have Node.js and npm installed. We use <a href=\"http://gruntjs.com/\">Grunt</a> to build Pure.</p>\n<pre>$ git clone git@github.com:yui/pure.git\n$ cd pure\n$ npm install\n$ grunt</pre><h3>Build Files</h3>\n<p>Now, all Pure CSS files should be built into the <code>pure/build/</code> directory. All\nfiles that are in this build directory are also available on the CDN. The naming\nconventions of the files in the <code>build/</code> directory follow these rules:</p>\n<ul>\n<li><p><code>[module]-core.css</code>: The minimal set of styles, ususally structural, that\nprovide the base on which the rest of the module&apos;s styles build.</p>\n</li>\n<li><p><code>[module]-nr.css</code>: Rollup of <code>[module]-core.css</code> + <code>[module].css</code> +\n<code>[module]-[feature].css</code> from the <code>src/[module]/</code> dir. This is the\nnon-responsive version of a module.</p>\n</li>\n<li><p><code>[module].css</code>: Rollup of <code>[module]-nr.css</code> + <code>[module]-r.css</code> from the\n<code>build/</code> dir. This is the responsive version of a module.</p>\n</li>\n<li><p><code>*-min.css</code>: A minified file version of the files of the same name.</p>\n</li>\n<li><p><code>pure.css</code>: A rollup of all <code>[module].css</code> files in the <code>build/</code> dir. This is\na responsive roll-up of everything, non-minified.</p>\n</li>\n<li><p><code>pure-min.css</code>: Minified version of <code>pure.css</code> that should be used in\nproduction.</p>\n</li>\n<li><p><code>pure-nr.css</code>: A Rollup of all modules without @media queries. This is a\nnon-responsive roll-up of everything, non-minified.</p>\n</li>\n<li><p><code>pure-nr-min.css</code>: Minified version of <code>pure-nr.css</code> that should be used in\nproduction.</p>\n</li>\n</ul>\n<h2>Browser Support and Testing</h2>\n<p>Pure is tested and works in:</p>\n<ul>\n<li>IE 7+</li>\n<li>Latest Stable: Firefox, Chrome, Safari</li>\n<li>iOS 6.x, 7.x</li>\n<li>Android 4.x</li>\n</ul>\n<h2>Docs and Website</h2>\n<p><a href=\"http://purecss.io/\">Pure&apos;s website</a> is also open source, so please open any issues or pull\nrequests for the docs and website over at the <a href=\"https://github.com/yui/pure-site\"><code>pure-site</code></a>\nrepository.</p>\n<h2>Contributing</h2>\n<p>See the <a href=\"https://github.com/yui/pure/blob/master/CONTRIBUTING.md\">CONTRIBUTING file</a> for information on how to contribute to Pure.</p>\n<h2>License</h2>\n<p>This software is free to use under the Yahoo! Inc. BSD license.\nSee the <a href=\"https://github.com/yui/pure/blob/master/LICENSE.md\">LICENSE file</a> for license text and copyright information.</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/apnerve/pure",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/apnerve",
+          "text": "apnerve"
+        }
+      ]
+    }
+  ]
+}
